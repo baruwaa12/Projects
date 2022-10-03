@@ -1,0 +1,66 @@
+
+1. Create an input for the user to enter their flight specification. It will need to follow the format of "AMS 0 25 S E"
+
+AMS - Amsterdam
+GLA = Glasgow
+
+0 - Refers to the Number of bags
+
+25 - Both digits refer to the age of the passenger 
+
+S, V, N - Standard, Vegetarian, No Meal
+
+E,F - Seating Class (Economy or First class)
+
+
+
+2. if NumOfBags = 0 or 1, set bagCost = 0
+
+   if NumOfBags >= 2; bagCost = (NumOfBags - 1) * 20
+
+
+
+3. BasicFlightCostAMS = 150
+   BasicFlightCostGLA = 80
+   CurrentTotalFC = 0
+
+   If PassengerAge <= 15 and destination is AMS:
+	CurrentTotalFC = BasicFlightCostAMS / 2
+
+   If PassengerAge <= 15 and destination is GLA:
+	CurrentTotalFC = BasicFlightCostGLA / 2
+
+
+4. Set MealCost = 0
+   if PassengerAge <= 15 and meal = "S"
+        MealCost = 7.50
+    else:
+	MealCost = 10.00
+   
+   if PassengerAge <= 15 and meal = "V"
+        MealCost = 9.50
+     else:
+	  MealCost = 12.00
+  
+	
+5.  If SeatingClass = F
+	TotalFC = (CurrentTotalFC * 6)
+    else:
+	TotalFC = CurrentTotalFC
+
+
+6. Print a summary of these 7 points
+	- Destination Airport
+	- Flight Cost
+	- Number of bags
+	- Baggage Cost
+	- Meal Cost
+	- Seating Class
+	- Total Cost
+
+
+
+   
+
+
+
